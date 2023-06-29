@@ -6,15 +6,14 @@ int main(void)
     int x, y, soma, i;
 
     i = 0;
+    while (num[i] != num[8])
+    {
+        printf("Numeros: %d\n", num[i]);
+        i++;
+    }
 
-    printf("%d\n", num[i]);
-
-    scanf("%d", &x);
-    printf("%d\n", x);
-
-    scanf("%d", &y);
-    printf("%d\n", y);
-
+    printf("Digite os números: ");
+    scanf("%d%d", &x, &y);
     soma = (x + y);
     printf("Valor é igual: %d\n", soma);
     return (0);
