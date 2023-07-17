@@ -2,12 +2,28 @@
 
 int main(void)
 {
-    char ch1, ch2, ch3;
+    int num_negativos, i = 0;
+    float num[10];
+    float num_positivos = 0.0;
 
-    ch2 = 'A';
-    ch3 = 'i';
+    num_negativos = 0;
+    num_positivos = 0;
 
-    ch1 = ch2 + ch3 - '0';
-    printf("Forma: %c\nch2: %c\nch3: %c\n", ch1, ch2, ch3);
+    for (i = 0; i < 10; i++)
+    {
+        printf("Digite os numeros: ");
+        scanf("%f", &num[i]);
+    }
+    
+    for (i = 0; i < 10; i++)
+    {
+        if (num[i] < 0)
+            num_negativos++;
+        else
+            num_positivos += num[i];    
+    }
+    printf("Quantidade de número negativos: %d\n", num_negativos);
+    printf("Soma dos números positivos: %.2f\n", num_positivos);
+
     return (0);
 }
