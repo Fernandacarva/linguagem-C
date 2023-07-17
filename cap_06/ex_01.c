@@ -1,11 +1,14 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     int i, num[6];
-    printf("Digite 6 numeros inteiros.\n");
-    for (i = 0; i < 6; i++) {
-        printf("Digite o %d valor: ", i + 1);
+
+    printf("Digite os valores:");
+    for (i = 0; i < 6; i++)
+    {
         scanf("%d", &num[i]);
+        printf("Valores lidos: %d\n", num[i]);
     }
+    return (0);
 }
